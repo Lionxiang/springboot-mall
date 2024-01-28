@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product function implement query product">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/constant/ProductCategory.java" afterDir="false" />
+    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="change category type from string to enum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/rowmapper/ProductRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/rowmapper/ProductRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706413910582</updated>
-      <workItem from="1706413911798" duration="5924000" />
+      <workItem from="1706413911798" duration="6667000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -129,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706421308610</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change category type from string to enum">
+      <option name="closed" value="true" />
+      <created>1706425828074</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706425828074</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +156,8 @@
     <MESSAGE value="initial" />
     <MESSAGE value="initial again" />
     <MESSAGE value="product function implement query product" />
-    <option name="LAST_COMMIT_MESSAGE" value="product function implement query product" />
+    <MESSAGE value="change category type from string to enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="change category type from string to enum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
