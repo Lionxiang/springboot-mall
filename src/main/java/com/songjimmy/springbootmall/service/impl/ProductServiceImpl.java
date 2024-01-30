@@ -1,14 +1,13 @@
 package com.songjimmy.springbootmall.service.impl;
 
-import com.songjimmy.springbootmall.constant.ProductCategory;
 import com.songjimmy.springbootmall.dao.ProductDao;
+import com.songjimmy.springbootmall.dto.ProductQueryParams;
 import com.songjimmy.springbootmall.dto.ProductRequest;
 import com.songjimmy.springbootmall.model.Product;
 import com.songjimmy.springbootmall.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.security.PrivateKey;
 import java.util.List;
 
 @Component
@@ -18,8 +17,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
 
     @Override
-    public List<Product> getProducts(ProductCategory category, String search) {
-        return productDao.getProducts(category, search);
+    public List<Product> getProducts(ProductQueryParams productQueryParams) {
+        return productDao.getProducts(productQueryParams);
     }
 
     @Override

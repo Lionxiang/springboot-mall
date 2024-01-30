@@ -2,6 +2,7 @@ package com.songjimmy.springbootmall.dao.impl;
 
 import com.songjimmy.springbootmall.constant.ProductCategory;
 import com.songjimmy.springbootmall.dao.ProductDao;
+import com.songjimmy.springbootmall.dto.ProductQueryParams;
 import com.songjimmy.springbootmall.dto.ProductRequest;
 import com.songjimmy.springbootmall.model.Product;
 import com.songjimmy.springbootmall.rowmapper.ProductRowMapper;
@@ -24,18 +25,20 @@ public class ProductDaoImpl implements ProductDao {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     @Override
-    public List<Product> getProducts(ProductCategory category, String search) {
+    public List<Product> getProducts(ProductQueryParams productQueryParams) {
         String sql = "select product_id,product_name, category, image_url, price, stock, description, " +
                 "created_date, last_modified_date from product where 1=1";
 
         Map<String, Object> map = new HashMap<>();
+        String category = productQueryParams.getCategory().name();
+        String search = productQueryParams.getSearch();
 
-        if(category != null){
+        if(!category.trim().isEmpty()){
             sql += " and category = :category";
-            map.put("category", category.name());
+            map.put("category", category);
         }
 
-        if(search != null && !"".equals(search.trim())){
+        if(!search.trim().isEmpty()){
             sql += " and product_name like :search";
             map.put("search", "%" + search + "%");
         }
