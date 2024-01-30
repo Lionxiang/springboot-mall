@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - delete function">
+    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - query list function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/productController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/productController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/ProductDao.java" afterDir="false" />
@@ -109,7 +109,8 @@
       <option name="presentableId" value="Default" />
       <updated>1706413910582</updated>
       <workItem from="1706413911798" duration="10848000" />
-      <workItem from="1706531957982" duration="1553000" />
+      <workItem from="1706531957982" duration="1623000" />
+      <workItem from="1706614500893" duration="1204000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -175,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706430644501</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="product-function - query list function">
+      <option name="closed" value="true" />
+      <created>1706533878040</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706533878040</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +210,8 @@
     <MESSAGE value="product-function - create function" />
     <MESSAGE value="product-function - update function" />
     <MESSAGE value="product-function - delete function" />
-    <option name="LAST_COMMIT_MESSAGE" value="product-function - delete function" />
+    <MESSAGE value="product-function - query list function" />
+    <option name="LAST_COMMIT_MESSAGE" value="product-function - query list function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
