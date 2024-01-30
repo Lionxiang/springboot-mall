@@ -30,18 +30,18 @@ public class ProductDaoImpl implements ProductDao {
                 "created_date, last_modified_date from product where 1=1";
 
         Map<String, Object> map = new HashMap<>();
-        String category = productQueryParams.getCategory().name();
-        String search = productQueryParams.getSearch();
 
-        if(!category.trim().isEmpty()){
+        if(productQueryParams.getCategory()!= null){
             sql += " and category = :category";
-            map.put("category", category);
+            map.put("category", productQueryParams.getCategory().name());
         }
 
-        if(!search.trim().isEmpty()){
+        if(productQueryParams.getSearch() != null){
             sql += " and product_name like :search";
-            map.put("search", "%" + search + "%");
+            map.put("search", "%" + productQueryParams.getSearch() + "%");
         }
+
+        sql += " order by " + productQueryParams.getOrderBy() + " " + productQueryParams.getSort();
 
         return namedParameterJdbcTemplate.query(sql, map, new ProductRowMapper());
     }
