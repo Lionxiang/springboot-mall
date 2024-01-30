@@ -42,6 +42,7 @@ public class ProductDaoImpl implements ProductDao {
         }
 
         sql += " order by " + productQueryParams.getOrderBy() + " " + productQueryParams.getSort();
+        sql += " limit " + productQueryParams.getLimit() + " offset " + productQueryParams.getOffset() ;
 
         return namedParameterJdbcTemplate.query(sql, map, new ProductRowMapper());
     }
