@@ -119,4 +119,24 @@ public class ProductDaoImpl implements ProductDao {
 
         namedParameterJdbcTemplate.update(sql, map);
     }
+
+    @Override
+    public Integer countProduct(ProductQueryParams productQueryParams) {
+        String sql = "select count(1) from product where 1=1";
+
+        Map<String, Object> map = new HashMap<>();
+
+        if(productQueryParams.getCategory()!= null){
+            sql += " and category = :category";
+            map.put("category", productQueryParams.getCategory().name());
+        }
+
+        if(productQueryParams.getSearch() != null){
+            sql += " and product_name like :search";
+            map.put("search", "%" + productQueryParams.getSearch() + "%");
+        }
+
+        // queryObject是返回count用的api
+        return namedParameterJdbcTemplate.queryForObject(sql, map, Integer.class);
+    }
 }
