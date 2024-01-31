@@ -42,7 +42,7 @@ public class ProductRequest {
         return imageUrl;
     }
 
-    public void setImage_url(String imageUrl) {
+    public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
 

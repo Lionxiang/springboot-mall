@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - add total count">
+    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - refine code">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/controller/ProductControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/productController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/ProductDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/ProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/rowmapper/ProductRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/rowmapper/ProductRowMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -49,27 +58,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MyTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SpringbootMallApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MyTest.executor": "Run",
+    "JUnit.ProductControllerTest.executor": "Run",
+    "JUnit.ProductControllerTest.getProduct_success.executor": "Run",
+    "JUnit.ProductControllerTest.getProducts_filtering.executor": "Run",
+    "JUnit.ProductControllerTest.updateProduct_success.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.SpringbootMallApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Spring Boot.SpringbootMallApplication">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.songjimmy.springbootmall.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ProductControllerTest">
     <configuration name="MyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.constant.MyTest" />
       <module name="springboot-mall" />
@@ -83,6 +106,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.ProductControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest.getProduct_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.ProductControllerTest" />
+      <option name="METHOD_NAME" value="getProduct_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest.getProducts_filtering" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.ProductControllerTest" />
+      <option name="METHOD_NAME" value="getProducts_filtering" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest.updateProduct_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.ProductControllerTest" />
+      <option name="METHOD_NAME" value="updateProduct_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootMallApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="springboot-mall" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.songjimmy.springbootmall.SpringbootMallApplication" />
@@ -92,6 +178,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductControllerTest" />
+        <item itemvalue="JUnit.ProductControllerTest.getProduct_success" />
+        <item itemvalue="JUnit.ProductControllerTest.getProducts_filtering" />
+        <item itemvalue="JUnit.ProductControllerTest.updateProduct_success" />
         <item itemvalue="Application.MyTest" />
       </list>
     </recent_temporary>
@@ -107,7 +197,7 @@
       <workItem from="1706413911798" duration="10848000" />
       <workItem from="1706531957982" duration="1623000" />
       <workItem from="1706614500893" duration="4799000" />
-      <workItem from="1706703752763" duration="2835000" />
+      <workItem from="1706703752763" duration="6025000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -221,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706707577048</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="product-function - refine code">
+      <option name="closed" value="true" />
+      <created>1706708359978</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1706708359978</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +351,8 @@
     <MESSAGE value="product-function - add order by" />
     <MESSAGE value="product-function - add limit offset" />
     <MESSAGE value="product-function - add total count" />
-    <option name="LAST_COMMIT_MESSAGE" value="product-function - add total count" />
+    <MESSAGE value="product-function - refine code" />
+    <option name="LAST_COMMIT_MESSAGE" value="product-function - refine code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

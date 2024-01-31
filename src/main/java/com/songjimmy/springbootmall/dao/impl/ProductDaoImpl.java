@@ -30,7 +30,7 @@ public class ProductDaoImpl implements ProductDao {
 
         Map<String, Object> map = new HashMap<>();
 
-        addFilteringSQL(sql, map, productQueryParams);
+        sql = addFilteringSQL(sql, map, productQueryParams);
 
         // queryObject是返回count用的api
         return namedParameterJdbcTemplate.queryForObject(sql, map, Integer.class);
@@ -43,7 +43,7 @@ public class ProductDaoImpl implements ProductDao {
 
         Map<String, Object> map = new HashMap<>();
 
-        addFilteringSQL(sql, map, productQueryParams);
+        sql = addFilteringSQL(sql, map, productQueryParams);
 
         sql += " order by " + productQueryParams.getOrderBy() + " " + productQueryParams.getSort();
         sql += " limit " + productQueryParams.getLimit() + " offset " + productQueryParams.getOffset() ;
