@@ -25,21 +25,25 @@ public class ProductDaoImpl implements ProductDao {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     @Override
+    public Integer countProduct(ProductQueryParams productQueryParams) {
+        String sql = "select count(1) from product where 1=1";
+
+        Map<String, Object> map = new HashMap<>();
+
+        addFilteringSQL(sql, map, productQueryParams);
+
+        // queryObject是返回count用的api
+        return namedParameterJdbcTemplate.queryForObject(sql, map, Integer.class);
+    }
+
+    @Override
     public List<Product> getProducts(ProductQueryParams productQueryParams) {
         String sql = "select product_id,product_name, category, image_url, price, stock, description, " +
                 "created_date, last_modified_date from product where 1=1";
 
         Map<String, Object> map = new HashMap<>();
 
-        if(productQueryParams.getCategory()!= null){
-            sql += " and category = :category";
-            map.put("category", productQueryParams.getCategory().name());
-        }
-
-        if(productQueryParams.getSearch() != null){
-            sql += " and product_name like :search";
-            map.put("search", "%" + productQueryParams.getSearch() + "%");
-        }
+        addFilteringSQL(sql, map, productQueryParams);
 
         sql += " order by " + productQueryParams.getOrderBy() + " " + productQueryParams.getSort();
         sql += " limit " + productQueryParams.getLimit() + " offset " + productQueryParams.getOffset() ;
@@ -120,11 +124,7 @@ public class ProductDaoImpl implements ProductDao {
         namedParameterJdbcTemplate.update(sql, map);
     }
 
-    @Override
-    public Integer countProduct(ProductQueryParams productQueryParams) {
-        String sql = "select count(1) from product where 1=1";
-
-        Map<String, Object> map = new HashMap<>();
+    private String addFilteringSQL(String sql, Map<String, Object> map, ProductQueryParams productQueryParams){
 
         if(productQueryParams.getCategory()!= null){
             sql += " and category = :category";
@@ -136,7 +136,6 @@ public class ProductDaoImpl implements ProductDao {
             map.put("search", "%" + productQueryParams.getSearch() + "%");
         }
 
-        // queryObject是返回count用的api
-        return namedParameterJdbcTemplate.queryForObject(sql, map, Integer.class);
+        return sql;
     }
 }
