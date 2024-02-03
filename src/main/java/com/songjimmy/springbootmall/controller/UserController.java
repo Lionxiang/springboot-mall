@@ -1,5 +1,6 @@
 package com.songjimmy.springbootmall.controller;
 
+import com.songjimmy.springbootmall.dto.UserLoginRegister;
 import com.songjimmy.springbootmall.dto.UserRegisterRequest;
 import com.songjimmy.springbootmall.model.User;
 import com.songjimmy.springbootmall.service.UserService;
@@ -26,5 +27,10 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(user);
     }
 
+    @PostMapping("/users/login")
+    public ResponseEntity<User> login(@RequestBody @Valid UserLoginRegister userLoginRegister){
+        User user = userService.login(userLoginRegister);
 
+        return ResponseEntity.status(HttpStatus.OK).body(user);
+    }
 }

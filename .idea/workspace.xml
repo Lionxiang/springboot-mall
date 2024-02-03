@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - register user">
+    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - register user improve">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/UserLoginRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/UserRegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +194,7 @@
       <workItem from="1706614500893" duration="4799000" />
       <workItem from="1706703752763" duration="6520000" />
       <workItem from="1706787194383" duration="3461000" />
-      <workItem from="1706923454714" duration="1805000" />
+      <workItem from="1706923454714" duration="2703000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -334,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706799930884</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="product-function - register user improve">
+      <option name="closed" value="true" />
+      <created>1706925403349</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1706925403349</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +375,8 @@
     <MESSAGE value="product-function - refine code" />
     <MESSAGE value="product-function - unit test" />
     <MESSAGE value="product-function - register user" />
-    <option name="LAST_COMMIT_MESSAGE" value="product-function - register user" />
+    <MESSAGE value="product-function - register user improve" />
+    <option name="LAST_COMMIT_MESSAGE" value="product-function - register user improve" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
