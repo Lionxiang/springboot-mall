@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.server.ResponseStatusException;
 
 @Component
@@ -30,6 +31,9 @@ public class UserServiceImpl implements UserService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
 
+        // 使用MD5生成雜湊值
+        userRegisterRequest.setPassword(transHashedPassword(userRegisterRequest.getPassword()));
+
         // 創建帳戶
         return userDao.createUser(userRegisterRequest);
     }
@@ -43,15 +47,25 @@ public class UserServiceImpl implements UserService {
     public User login(UserLoginRegister userLoginRegister) {
         User user = userDao.getUserByEmail(userLoginRegister.getEmail());
 
+        // 檢查USER是否存在
         if(user == null){
             log.warn("該email {} 尚未註冊", userLoginRegister.getEmail());
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
-        if(user.getPassword().equals(userLoginRegister.getPassword())){
+
+        // 使用MD5生成雜湊值
+        String hashedPassword = transHashedPassword(userLoginRegister.getPassword());
+
+        // 檢查密碼
+        if(user.getPassword().equals(hashedPassword)){
             return user;
         }else{
             log.warn("email {} 的密碼不正確", userLoginRegister.getEmail());
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
+    }
+
+    private String transHashedPassword(String password){
+        return DigestUtils.md5DigestAsHex(password.getBytes());
     }
 }

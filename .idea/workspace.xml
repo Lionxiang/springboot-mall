@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - register user improve">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/UserLoginRegister.java" afterDir="false" />
+    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - user login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +191,7 @@
       <workItem from="1706614500893" duration="4799000" />
       <workItem from="1706703752763" duration="6520000" />
       <workItem from="1706787194383" duration="3461000" />
-      <workItem from="1706923454714" duration="2703000" />
+      <workItem from="1706923454714" duration="3899000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -340,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706925403349</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="product-function - user login">
+      <option name="closed" value="true" />
+      <created>1706926526470</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1706926526470</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +381,8 @@
     <MESSAGE value="product-function - unit test" />
     <MESSAGE value="product-function - register user" />
     <MESSAGE value="product-function - register user improve" />
-    <option name="LAST_COMMIT_MESSAGE" value="product-function - register user improve" />
+    <MESSAGE value="product-function - user login" />
+    <option name="LAST_COMMIT_MESSAGE" value="product-function - user login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
