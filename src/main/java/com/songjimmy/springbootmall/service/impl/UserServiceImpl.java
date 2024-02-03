@@ -1,7 +1,7 @@
 package com.songjimmy.springbootmall.service.impl;
 
 import com.songjimmy.springbootmall.dao.UserDao;
-import com.songjimmy.springbootmall.dto.UserLoginRegister;
+import com.songjimmy.springbootmall.dto.UserLoginRequest;
 import com.songjimmy.springbootmall.dto.UserRegisterRequest;
 import com.songjimmy.springbootmall.model.User;
 import com.songjimmy.springbootmall.service.UserService;
@@ -44,23 +44,23 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User login(UserLoginRegister userLoginRegister) {
-        User user = userDao.getUserByEmail(userLoginRegister.getEmail());
+    public User login(UserLoginRequest userLoginRequest) {
+        User user = userDao.getUserByEmail(userLoginRequest.getEmail());
 
         // 檢查USER是否存在
         if(user == null){
-            log.warn("該email {} 尚未註冊", userLoginRegister.getEmail());
+            log.warn("該email {} 尚未註冊", userLoginRequest.getEmail());
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
 
         // 使用MD5生成雜湊值
-        String hashedPassword = transHashedPassword(userLoginRegister.getPassword());
+        String hashedPassword = transHashedPassword(userLoginRequest.getPassword());
 
         // 檢查密碼
         if(user.getPassword().equals(hashedPassword)){
             return user;
         }else{
-            log.warn("email {} 的密碼不正確", userLoginRegister.getEmail());
+            log.warn("email {} 的密碼不正確", userLoginRequest.getEmail());
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
     }

@@ -5,8 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
     private Integer userId;
-
-    @JsonProperty("e-mail")
     private String email;
 
     @JsonIgnore

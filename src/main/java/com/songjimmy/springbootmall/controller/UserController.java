@@ -1,6 +1,6 @@
 package com.songjimmy.springbootmall.controller;
 
-import com.songjimmy.springbootmall.dto.UserLoginRegister;
+import com.songjimmy.springbootmall.dto.UserLoginRequest;
 import com.songjimmy.springbootmall.dto.UserRegisterRequest;
 import com.songjimmy.springbootmall.model.User;
 import com.songjimmy.springbootmall.service.UserService;
@@ -8,10 +8,12 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+@Validated
 @RestController
 public class UserController {
 
@@ -28,8 +30,8 @@ public class UserController {
     }
 
     @PostMapping("/users/login")
-    public ResponseEntity<User> login(@RequestBody @Valid UserLoginRegister userLoginRegister){
-        User user = userService.login(userLoginRegister);
+    public ResponseEntity<User> login(@RequestBody @Valid UserLoginRequest userLoginRequest){
+        User user = userService.login(userLoginRequest);
 
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }

@@ -1,6 +1,6 @@
 package com.songjimmy.springbootmall.service;
 
-import com.songjimmy.springbootmall.dto.UserLoginRegister;
+import com.songjimmy.springbootmall.dto.UserLoginRequest;
 import com.songjimmy.springbootmall.dto.UserRegisterRequest;
 import com.songjimmy.springbootmall.model.User;
 import org.springframework.stereotype.Component;
@@ -12,5 +12,5 @@ public interface UserService {
 
     User getUserById(Integer userId);
 
-    User login(UserLoginRegister userLoginRegister);
+    User login(UserLoginRequest userLoginRequest);
 }

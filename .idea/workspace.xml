@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - user login">
+    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - login and register with md5 password">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/controller/UserControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/UserLoginRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/UserLoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/SpringbootMallApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/controller/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/controller/ProductControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +27,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -57,6 +67,8 @@
     &quot;JUnit.ProductControllerTest.getProduct_success.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ProductControllerTest.getProducts_filtering.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ProductControllerTest.updateProduct_success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.register_success.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -84,20 +96,7 @@
       <recent name="com.songjimmy.springbootmall.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootMallApplication">
-    <configuration name="MyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.constant.MyTest" />
-      <module name="springboot-mall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.songjimmy.springbootmall.constant.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserControllerTest">
     <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-mall" />
       <extension name="coverage">
@@ -145,7 +144,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductControllerTest.updateProduct_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-mall" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +153,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.ProductControllerTest" />
-      <option name="METHOD_NAME" value="updateProduct_success" />
+      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.register_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="register_success" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.ProductControllerTest" />
         <item itemvalue="JUnit.ProductControllerTest.getProduct_success" />
+        <item itemvalue="JUnit.UserControllerTest.register_success" />
         <item itemvalue="JUnit.ProductControllerTest.getProducts_filtering" />
-        <item itemvalue="JUnit.ProductControllerTest.updateProduct_success" />
-        <item itemvalue="Application.MyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +205,8 @@
       <workItem from="1706614500893" duration="4799000" />
       <workItem from="1706703752763" duration="6520000" />
       <workItem from="1706787194383" duration="3461000" />
-      <workItem from="1706923454714" duration="3899000" />
+      <workItem from="1706923454714" duration="5986000" />
+      <workItem from="1706929515029" duration="1480000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -345,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706926526470</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="product-function - login and register with md5 password">
+      <option name="closed" value="true" />
+      <created>1706927617753</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1706927617753</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +405,8 @@
     <MESSAGE value="product-function - register user" />
     <MESSAGE value="product-function - register user improve" />
     <MESSAGE value="product-function - user login" />
-    <option name="LAST_COMMIT_MESSAGE" value="product-function - user login" />
+    <MESSAGE value="product-function - login and register with md5 password" />
+    <option name="LAST_COMMIT_MESSAGE" value="product-function - login and register with md5 password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
