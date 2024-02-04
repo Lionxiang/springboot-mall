@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - create order add check logic">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/OrderQueryParams.java" afterDir="false" />
+    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - query orders">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/controller/OrderControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/OrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/OrderDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +19,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -58,6 +55,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.MyTest.executor": "Run",
+    "JUnit.OrderControllerTest.createOrder_success.executor": "Run",
+    "JUnit.OrderControllerTest.executor": "Run",
     "JUnit.ProductControllerTest.executor": "Run",
     "JUnit.ProductControllerTest.getProduct_success.executor": "Run",
     "JUnit.ProductControllerTest.getProducts_filtering.executor": "Run",
@@ -91,7 +90,38 @@
       <recent name="com.songjimmy.springbootmall.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootMallApplication">
+  <component name="RunManager" selected="JUnit.OrderControllerTest">
+    <configuration name="OrderControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.OrderControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderControllerTest.createOrder_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.OrderControllerTest" />
+      <option name="METHOD_NAME" value="createOrder_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-mall" />
       <extension name="coverage">
@@ -123,22 +153,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductControllerTest.getProducts_filtering" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot-mall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.ProductControllerTest" />
-      <option name="METHOD_NAME" value="getProducts_filtering" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-mall" />
       <extension name="coverage">
@@ -154,22 +168,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.register_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot-mall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.songjimmy.springbootmall.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.songjimmy.springbootmall.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.songjimmy.springbootmall.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="register_success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringbootMallApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="springboot-mall" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.songjimmy.springbootmall.SpringbootMallApplication" />
@@ -179,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderControllerTest" />
+        <item itemvalue="JUnit.OrderControllerTest.createOrder_success" />
         <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.ProductControllerTest" />
         <item itemvalue="JUnit.ProductControllerTest.getProduct_success" />
-        <item itemvalue="JUnit.UserControllerTest.register_success" />
-        <item itemvalue="JUnit.ProductControllerTest.getProducts_filtering" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +200,7 @@
       <workItem from="1706787194383" duration="3461000" />
       <workItem from="1706923454714" duration="5986000" />
       <workItem from="1706929515029" duration="1708000" />
-      <workItem from="1707009910459" duration="10816000" />
+      <workItem from="1707009910459" duration="12317000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -396,7 +394,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707023520348</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="product-function - query orders">
+      <option name="closed" value="true" />
+      <created>1707025020641</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1707025020641</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +444,8 @@
     <MESSAGE value="product-function - create order I" />
     <MESSAGE value="product-function - create order II" />
     <MESSAGE value="product-function - create order add check logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="product-function - create order add check logic" />
+    <MESSAGE value="product-function - query orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="product-function - query orders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
