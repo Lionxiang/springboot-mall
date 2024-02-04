@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - login and register with md5 password">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/controller/UserControllerTest.java" afterDir="false" />
+    <list default="true" id="ebbf565c-999e-4550-a2da-2395592f9509" name="Changes" comment="product-function - user test and update code for suit test(H2 cannot use user be a parameter name)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/OrderDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/BuyItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/CreateOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/UserLoginRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dto/UserLoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/SpringbootMallApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/controller/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/songjimmy/springbootmall/controller/ProductControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +25,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -60,34 +58,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MyTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTest.getProduct_success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTest.getProducts_filtering.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTest.updateProduct_success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.register_success.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SpringbootMallApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MyTest.executor": "Run",
+    "JUnit.ProductControllerTest.executor": "Run",
+    "JUnit.ProductControllerTest.getProduct_success.executor": "Run",
+    "JUnit.ProductControllerTest.getProducts_filtering.executor": "Run",
+    "JUnit.ProductControllerTest.updateProduct_success.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserControllerTest.register_success.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.SpringbootMallApplication.executor": "Debug",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -96,7 +94,7 @@
       <recent name="com.songjimmy.springbootmall.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTest">
+  <component name="RunManager" selected="Spring Boot.SpringbootMallApplication">
     <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-mall" />
       <extension name="coverage">
@@ -206,7 +204,8 @@
       <workItem from="1706703752763" duration="6520000" />
       <workItem from="1706787194383" duration="3461000" />
       <workItem from="1706923454714" duration="5986000" />
-      <workItem from="1706929515029" duration="1480000" />
+      <workItem from="1706929515029" duration="1708000" />
+      <workItem from="1707009910459" duration="5544000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -368,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706927617753</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="product-function - user test and update code for suit test(H2 cannot use user be a parameter name)">
+      <option name="closed" value="true" />
+      <created>1706931113510</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1706931113510</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +413,8 @@
     <MESSAGE value="product-function - register user improve" />
     <MESSAGE value="product-function - user login" />
     <MESSAGE value="product-function - login and register with md5 password" />
-    <option name="LAST_COMMIT_MESSAGE" value="product-function - login and register with md5 password" />
+    <MESSAGE value="product-function - user test and update code for suit test(H2 cannot use user be a parameter name)" />
+    <option name="LAST_COMMIT_MESSAGE" value="product-function - user test and update code for suit test(H2 cannot use user be a parameter name)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -415,6 +423,15 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/songjimmy/springbootmall/dao/impl/OrderDaoImpl.java</url>
+          <line>45</line>
+          <properties class="com.songjimmy.springbootmall.dao.impl.OrderDaoImpl" method="createOrderItems">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
